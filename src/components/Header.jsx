@@ -25,7 +25,7 @@ export function Header() {
     if (href.startsWith("#")) {
       return false;
     }
-
+  
     if (href === "/") { 
       return pathname === "/"
     }
