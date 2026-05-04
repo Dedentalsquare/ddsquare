@@ -18,6 +18,9 @@ const newsreader = Newsreader({
 export const metadata = {
   title: "De Dental Square",
   description: "Premier Dentistry in Varanasi",
+  icons: {
+    icon: "/DentalSquare_Logo_Black.png",
+  },
 };
 
 export default function RootLayout({ children }) {

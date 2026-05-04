@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -12,6 +13,7 @@ import { Menu, Phone, Mail } from "lucide-react";
 
 export function Header() {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -79,17 +81,20 @@ export function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="md:hidden flex items-center">
-          <Sheet>
-            <SheetTrigger className="p-2 text-primary hover:bg-slate-50 focus:outline-none">
-              <Menu className="h-6 w-6" />
+        <div className="md:hidden flex items-center ml-4">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="text-primary hover:bg-slate-50 focus:outline-none">
+                <Menu className="h-6 w-6" />
+              </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-75 bg-white font-sans">
-              <nav className="flex flex-col gap-6 mt-12">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white font-sans p-6 sm:p-8">
+              <nav className="flex flex-col gap-6 mt-8">
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
+                    onClick={() => setIsOpen(false)}
                     aria-current={isActiveLink(link.href) ? "page" : undefined}
                     className={`text-sm font-semibold tracking-wider uppercase border-b pb-2 transition-colors ${
                       isActiveLink(link.href)
