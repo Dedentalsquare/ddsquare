@@ -60,15 +60,7 @@ export default function ContactPage() {
             </div>
 
             <div className="overflow-hidden rounded-[14px] border border-border/60 bg-[#cfe1e5] shadow-[0_18px_38px_rgba(0,16,20,0.04)]">
-              <div className="flex min-h-[320px] flex-col items-center justify-center px-6 py-10 text-center text-primary/75 sm:min-h-[340px]">
-                <MapPin className="h-8 w-8 text-primary/70" />
-                <p className="mt-4 text-sm font-medium uppercase tracking-[0.22em] text-primary/75">
-                  Varanasi, Ravindrapuri Map View
-                </p>
-                <p className="mt-3 max-w-sm text-sm leading-7 text-primary/60">
-                  Replace this panel with your embedded map or clinic location preview once the final asset is ready.
-                </p>
-              </div>
+              <img src="/IMG-20241202-WA0009.jpg" alt="Varanasi Clinic Location" className="w-full h-full object-cover min-h-[320px] sm:min-h-[340px]" />
             </div>
           </div>
 

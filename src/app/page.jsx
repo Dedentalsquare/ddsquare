@@ -46,10 +46,10 @@ export default function Home() {
           {/* Right Image area */}
           <div className="lg:w-1/2 relative mt-12 lg:mt-0 flex justify-end">
             <div className="relative w-full max-w-[500px] aspect-[4/5] bg-white p-4 shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
-               {/* Doctor Image Placeholder */}
+               {/* Doctor Image */}
                <div className="w-full h-full bg-slate-200 relative overflow-hidden flex items-center justify-center">
+                 <img src="/Photo from Dr. Neeraj Agrawal.jpg" alt="Dr. Neeraj Agrawal" className="w-full h-full object-cover" />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
-                 <span className="text-slate-400 font-sans">[ Doctor Image Placeholder ]</span>
                </div>
                
                {/* Floating Badge */}
@@ -127,8 +127,8 @@ export default function Home() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2">
-              <div className="aspect-square max-w-[500px] mx-auto bg-slate-200 overflow-hidden flex items-center justify-center filter grayscale contrast-125 shadow-lg border-8 border-white">
-                 <span className="text-slate-400 font-sans">[ Dr. Neeraj Agrawal Photo ]</span>
+              <div className="aspect-square max-w-[500px] mx-auto overflow-hidden shadow-lg border-8 border-white">
+                 <img src="/Photo from Dr. Neeraj Agrawal.jpg" alt="Dr. Neeraj Agrawal - Chief Periodontist" className="w-full h-full object-cover filter grayscale contrast-125" />
               </div>
             </div>
             

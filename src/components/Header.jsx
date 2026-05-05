@@ -19,7 +19,6 @@ export function Header() {
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "Insights", href: "/insights" },
-    { name: "Our Doctors", href: "#doctors" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -84,9 +83,9 @@ export function Header() {
         <div className="md:hidden flex items-center ml-4">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-primary hover:bg-slate-50 focus:outline-none">
+              <button className="inline-flex items-center justify-center rounded-md text-primary hover:bg-slate-50 focus:outline-none p-2">
                 <Menu className="h-6 w-6" />
-              </Button>
+              </button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white font-sans p-6 sm:p-8">
               <nav className="flex flex-col gap-6 mt-8">

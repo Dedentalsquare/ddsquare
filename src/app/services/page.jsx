@@ -13,7 +13,7 @@ export default function ServicesPage() {
     {
       id: "rct",
       title: "Root Canal (RCT)",
-      image: "", // Add your image path here, e.g., "/images/rct.jpg"
+      image: "/IMG-20240714-WA0000.jpg",
       description: "A modern, virtually painless procedure to save a severely damaged or infected tooth. Our clinical experts use microscopic technology to ensure precision and longevity.",
       procedure: [
         "Diagnosis & precise X-ray mapping.",
@@ -30,7 +30,7 @@ export default function ServicesPage() {
     {
       id: "mouth-filling",
       title: "Mouth Filling",
-      image: "",
+      image: "/IMG-20240714-WA0003.jpg",
       description: "Restore your tooth's structural integrity with biocompatible composite materials that blend seamlessly with your natural enamel.",
       procedure: [
         "Decay removal & cleaning.",
@@ -46,7 +46,7 @@ export default function ServicesPage() {
     {
       id: "smile-designing",
       title: "Smile Designing",
-      image: "",
+      image: "/IMG-20240701-WA0016.jpg",
       description: "A customized cosmetic plan that uses Digital Smile Design (DSD) to create the perfect aesthetic harmony between your teeth, gums, and face.",
       procedure: [
         "3D Facial Scanning.",
@@ -62,7 +62,7 @@ export default function ServicesPage() {
     {
       id: "teeth-whitening",
       title: "Tooth Cleaning & Whitening",
-      image: "",
+      image: "/IMG-20240713-WA0017.jpg",
       description: "Remove stubborn stains and bacterial biofilm with our professional scaling and advanced laser whitening systems for a brighter, healthier smile.",
       procedure: [
         "Ultrasonic Scaling.",
@@ -78,7 +78,7 @@ export default function ServicesPage() {
     {
       id: "smile-makeover",
       title: "Smile Makeover",
-      image: "",
+      image: "/IMG-20240701-WA0016.jpg",
       description: "A comprehensive transformation that may involve veneers, crowns, and contouring to address multiple dental concerns simultaneously.",
       procedure: [
         "Full mouth assessment.",
@@ -94,7 +94,7 @@ export default function ServicesPage() {
     {
       id: "implants",
       title: "Dental Implants",
-      image: "",
+      image: "/IMG-20240714-WA0006.jpg",
       description: "The gold standard for tooth replacement. Our surgical specialists use titanium implants to provide a permanent, root-like foundation for missing teeth.",
       procedure: [
         "3D Surgical Planning.",
@@ -110,7 +110,7 @@ export default function ServicesPage() {
     {
       id: "braces",
       title: "Dental Braces",
-      image: "",
+      image: "/IMG-20240713-WA0028.jpg",
       description: "From traditional metallic braces to modern clear aligners, we offer orthodontic solutions that correct bite alignment and straighten your smile discreetly.",
       procedure: [
         "Orthodontic Evaluation.",
@@ -126,7 +126,7 @@ export default function ServicesPage() {
     {
       id: "preventive",
       title: "Dental Health Tips",
-      image: "",
+      image: "/IMG-20240713-WA0015.jpg",
       description: "Preventive care is the foundation of a healthy smile. Our experts guide you through daily habits and nutritional advice to maintain lifelong oral wellness.",
       procedure: [
         "Proper brushing techniques.",
@@ -203,17 +203,12 @@ export default function ServicesPage() {
                   {/* Image Side */}
                   <div className="w-full lg:w-1/2 flex justify-center">
                     <div className="w-full max-w-[500px] aspect-[4/3] bg-slate-100 shadow-md flex items-center justify-center overflow-hidden border border-border relative">
-                      {service.image ? (
+                      {service.image && (
                         <img 
                           src={service.image} 
                           alt={service.title} 
                           className="w-full h-full object-cover filter contrast-105"
                         />
-                      ) : (
-                        <div className="text-center p-4">
-                           <span className="text-slate-400 font-sans block mb-2">[ Image Placeholder ]</span>
-                           <span className="text-primary font-serif italic text-lg">{service.title}</span>
-                        </div>
                       )}
                     </div>
                   </div>
