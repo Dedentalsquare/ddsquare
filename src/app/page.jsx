@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, CheckCircle2, Shield, MessageSquareText } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   const services = [
@@ -18,50 +19,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-secondary">
-        <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-24 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
-          
-          {/* Left Content */}
-          <div className="max-w-xl lg:w-1/2 pt-8 lg:pt-16">
-            <h2 className="text-sm font-semibold tracking-[0.1em] text-primary/70 uppercase mb-4 font-sans">
-              PREMIER DENTISTRY IN VARANASI
-            </h2>
-            <h1 className="text-5xl lg:text-6xl text-primary mb-6 leading-[1.1] font-serif">
-              YOUR SMILE,<br />
-              OUR PRIORITY
-            </h1>
-            <p className="text-muted-foreground text-lg mb-10 leading-relaxed font-sans">
-              Experience clinical excellence at De Dental Square. Led by gold medalist experts, we provide world-class dental care with a personalized touch in the heart of Ravindrapuri, Varanasi.
-            </p>
-            <div className="flex flex-wrap gap-4 font-sans">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8 uppercase tracking-wider text-xs font-semibold rounded-none">
-                SCHEDULE CONSULTATION <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button size="lg" variant="ghost" className="h-12 px-8 uppercase tracking-wider text-xs font-semibold text-primary hover:bg-black/5 rounded-none">
-                EXPLORE SERVICES
-              </Button>
-            </div>
-          </div>
-
-          {/* Right Image area */}
-          <div className="lg:w-1/2 relative mt-12 lg:mt-0 flex justify-end">
-            <div className="relative w-full max-w-[500px] aspect-[4/5] bg-white p-4 shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
-               {/* Doctor Image */}
-               <div className="w-full h-full bg-slate-200 relative overflow-hidden flex items-center justify-center">
-                 <img src="/Photo from Dr. Neeraj Agrawal.jpg" alt="Dr. Neeraj Agrawal" className="w-full h-full object-cover" />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
-               </div>
-               
-               {/* Floating Badge */}
-               <div className="absolute -bottom-6 -left-6 bg-white p-5 shadow-lg max-w-[240px] z-20">
-                 <h4 className="font-serif italic text-primary text-lg mb-1">Quality Guaranteed</h4>
-                 <p className="text-xs font-sans text-muted-foreground">Using international standards and latest technology for every procedure.</p>
-               </div>
-            </div>
-          </div>
-          
-        </div>
-      </section>
+      <Hero />
 
       {/* Metrics Bar */}
       <section className="bg-primary-container text-primary-foreground relative pt-12 pb-12 z-20 font-sans">
@@ -127,8 +85,8 @@ export default function Home() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2">
-              <div className="aspect-square max-w-[500px] mx-auto overflow-hidden shadow-lg border-8 border-white">
-                 <img src="/Photo from Dr. Neeraj Agrawal.jpg" alt="Dr. Neeraj Agrawal - Chief Periodontist" className="w-full h-full object-cover filter grayscale contrast-125" />
+              <div className="aspect-square max-w-[500px] mx-auto overflow-hidden shadow-lg border-8 border-white relative">
+                 <Image src="/Meet The Doctor Page.png" alt="Dr. Neeraj Agrawal - Chief Periodontist" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               </div>
             </div>
             
@@ -164,9 +122,11 @@ export default function Home() {
                 </div>
               </div>
               
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-none uppercase tracking-wider text-xs font-semibold h-12 px-8">
-                READ BIOGRAPHY
-              </Button>
+              <Link href="/meet-the-doctor">
+                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-none uppercase tracking-wider text-xs font-semibold h-12 px-8">
+                  READ BIOGRAPHY
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

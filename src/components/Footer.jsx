@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
@@ -10,9 +11,13 @@ export function Footer() {
           {/* Brand Info */}
           <div className="space-y-6">
             <Link href="/" className="inline-block">
-              <span className="font-semibold text-sm tracking-[0.2em] text-primary uppercase">
-                DE DENTAL SQUARE
-              </span>
+              <Image
+                src="/DeDentalSqaure_Logo_Green.png"
+                alt="De Dental Square Logo"
+                width={180}
+                height={60}
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               Leading the way in modern clinical dentistry with precision, technology, and empathy.

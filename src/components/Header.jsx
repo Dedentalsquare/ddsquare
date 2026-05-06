@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -40,9 +41,14 @@ export function Header() {
         
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span className="font-semibold text-sm lg:text-base tracking-[0.2em] text-primary uppercase">
-            DE DENTAL SQUARE
-          </span>
+          <Image
+            src="/DeDentalSqaure_Logo_Green.png"
+            alt="De Dental Square Logo"
+            width={180}
+            height={60}
+            className="h-10 sm:h-12 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -82,10 +88,8 @@ export function Header() {
         {/* Mobile Menu */}
         <div className="md:hidden flex items-center ml-4">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <button className="inline-flex items-center justify-center rounded-md text-primary hover:bg-slate-50 focus:outline-none p-2">
-                <Menu className="h-6 w-6" />
-              </button>
+            <SheetTrigger className="inline-flex items-center justify-center rounded-md text-primary hover:bg-slate-50 focus:outline-none p-2">
+              <Menu className="h-6 w-6" />
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white font-sans p-6 sm:p-8">
               <nav className="flex flex-col gap-6 mt-8">
