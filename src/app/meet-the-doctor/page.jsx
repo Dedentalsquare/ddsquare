@@ -19,7 +19,7 @@ export default function MeetTheDoctor() {
             <div className="w-full lg:w-[45%]">
               <div className="relative aspect-[4/5] w-full max-w-md mx-auto shadow-2xl rounded-xl overflow-hidden bg-white/50">
                 <Image 
-                  src="/Photo from Dr. Neeraj Agrawal.jpg" 
+                  src="/Meet The Doctor Page.png" 
                   alt="Dr. Neeraj Agrawal" 
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
