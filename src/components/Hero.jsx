@@ -17,6 +17,11 @@ export default function Hero() {
       mobile: "/2. Mobile Website Banner.png",
       alt: "Dental Clinic Banner 2",
     },
+    {
+      desktop:"/2. Desktop Website _Banner_2.png",
+      mobile: "/2. Mobile Website Banner.png",
+      alt: "Dental Clinic Banner 3",
+    }
   ];
 
   // Auto-play functionality
