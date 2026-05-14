@@ -6,14 +6,14 @@ import Hero from "@/components/Hero";
 
 export default function Home() {
   const services = [
-    { icon: "🦷", title: "Root Canal", desc: "Painless precision treatment to save your natural tooth from infection." },
-    { icon: "⚗️", title: "Mouth Filling", desc: "Composite, aesthetic restorations that blend perfectly with your teeth." },
-    { icon: "😁", title: "Smile Designing", desc: "Custom architectural planning for your perfect aesthetic smile." },
-    { icon: "✨", title: "Whitening", desc: "Advanced scaling and laser whitening for a radiant clinical polish." },
-    { icon: "🌟", title: "Smile Makeover", desc: "Comprehensive transformative procedures for a complete overhaul." },
-    { icon: "🔩", title: "Implants", desc: "High-grade titanium implants for durable, natural-looking tooth replacement." },
-    { icon: "😬", title: "Braces", desc: "Orthodontic solutions including modern invisible clear aligners." },
-    { icon: "🌿", title: "Health Tips", desc: "Expert preventative guidance for lifelong oral hygiene and wellness." },
+    { image: "/service/Root Canal (RCT).png", title: "Root Canal", desc: "Painless precision treatment to save your natural tooth from infection." },
+    { image: "/service/Mouth Filling.png", title: "Mouth Filling", desc: "Composite, aesthetic restorations that blend perfectly with your teeth." },
+    { image: "/service/Smile Designing.png", title: "Smile Designing", desc: "Custom architectural planning for your perfect aesthetic smile." },
+    { image: "/service/Tooth Cleaning & Whitening.png", title: "Whitening", desc: "Advanced scaling and laser whitening for a radiant clinical polish." },
+    { image: "/service/Smile Makeover.png", title: "Smile Makeover", desc: "Comprehensive transformative procedures for a complete overhaul." },
+    { image: "/service/Dental Implants.png", title: "Implants", desc: "High-grade titanium implants for durable, natural-looking tooth replacement." },
+    { image: "/service/Dental Braces.png", title: "Braces", desc: "Orthodontic solutions including modern invisible clear aligners." },
+    { image: "/service/Dental Health Tips.png", title: "Health Tips", desc: "Expert preventative guidance for lifelong oral hygiene and wellness." },
   ];
 
   return (
@@ -68,12 +68,14 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, i) => (
-              <div key={i} className="bg-card p-8 border border-border hover:border-primary/30 transition-colors shadow-sm group">
-                <div className="text-2xl mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
-                  {service.icon}
+              <div key={i} className="bg-card border border-border hover:border-primary/30 transition-colors shadow-sm group flex flex-col overflow-hidden">
+                <div className="relative w-full h-84 opacity-80 group-hover:opacity-100 transition-opacity flex-shrink-0">
+                  <Image src={service.image} alt={service.title} fill className="object-cover object-top" />
                 </div>
-                <h3 className="font-serif text-xl text-primary mb-3">{service.title}</h3>
-                <p className="text-sm font-sans text-muted-foreground leading-relaxed">{service.desc}</p>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="font-serif text-lg text-primary mb-3">{service.title}</h3>
+                  <p className="text-sm font-sans text-muted-foreground leading-relaxed">{service.desc}</p>
+                </div>
               </div>
             ))}
           </div>
