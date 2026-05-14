@@ -45,8 +45,8 @@ export function Header() {
           <Image
             src="/DeDentalSqaure_Logo_Green.png"
             alt="De Dental Square Logo"
-            width={180}
-            height={60}
+            width={160}
+            height={40}
             className=""
             priority
           />
