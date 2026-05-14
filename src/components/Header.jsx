@@ -47,7 +47,7 @@ export function Header() {
             alt="De Dental Square Logo"
             width={180}
             height={60}
-            className="h-12 sm:h-20 w-auto object-contain"
+            className=""
             priority
           />
         </Link>
