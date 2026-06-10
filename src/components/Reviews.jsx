@@ -4,15 +4,46 @@ import {
   Star, 
   CheckCircle2, 
   ShieldCheck, 
-  Globe, 
-  Smile, 
   User, 
-  Users, 
   Activity,
   Layers,
   Sparkles,
   Stethoscope
 } from "lucide-react";
+import Image from "next/image";
+
+// Custom inline SVG icons to match the screenshot
+const ToothIcon = () => (
+  <svg className="w-4.5 h-4.5 text-[#005f6a] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 2C8.5 2 6 4.5 6 8c0 3.5 1.5 6.5 4 8v3.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5V18c0-.6.4-1 1-1s1 .4 1 1v1.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5V16c2.5-1.5 4-4.5 4-8 0-3.5-2.5-6-6-6z" />
+  </svg>
+);
+
+const UserIcon = () => (
+  <svg className="w-4.5 h-4.5 text-[#005f6a] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+    <circle cx="12" cy="7" r="4" />
+  </svg>
+);
+
+const StaffIcon = () => (
+  <svg className="w-4.5 h-4.5 text-[#005f6a] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+    <circle cx="9" cy="7" r="4" />
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+  </svg>
+);
+
+const ImplantIcon = () => (
+  <svg className="w-4.5 h-4.5 text-[#005f6a] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 2C8.5 2 6 4 6 7.5c0 3 1.5 5 3 6.5.8.8 1 2 1 3v1" />
+    <path d="M14 17.5c0-1 .2-2.2 1-3 1.5-1.5 3-3.5 3-6.5C18 4 15.5 2 12 2z" />
+    <path d="M10 20h4" />
+    <path d="M11 22h2" />
+  </svg>
+);
+
 
 export default function Reviews() {
   // 24 realistic Google reviews for De Dental Square, Varanasi
@@ -258,94 +289,97 @@ const reviews = [
               Based on 305 Google reviews
             </p>
           </div>
-          <div className="flex items-center justify-center gap-2 mt-4 text-muted-foreground text-xs pb-4">
+          <div className="flex items-center justify-center gap-3 mt-4 text-muted-foreground text-xs pb-4">
             {/* Google Icon Logo */}
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <svg className="w-4.5 h-4.5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
               <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
             </svg>
-            <span className="tracking-wide font-medium">Google Reviews</span>
+            <span className="w-[1px] h-3.5 bg-slate-300" />
+            <span className="tracking-wide font-medium text-slate-500">Google Reviews</span>
           </div>
         </div>
 
-        {/* 1. Review Breakdown Summary Card (Placed at the top, full width, centered) */}
-        <div className="max-w-4xl mx-auto bg-white p-6 md:p-8 border border-border shadow-sm rounded-xl mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            
-            {/* Stars Progress List (Col span 7) */}
-            <div className="md:col-span-7 space-y-3">
-              <h3 className="text-sm font-serif font-semibold text-primary mb-3">Review Distribution</h3>
-              {[
-                { star: 5, count: 289, pct: "w-[94.7%]" },
-                { star: 4, count: 13, pct: "w-[4.2%]" },
-                { star: 3, count: 2, pct: "w-[0.7%]" },
-                { star: 2, count: 1, pct: "w-[0.3%]" },
-                { star: 1, count: 0, pct: "w-0" },
-              ].map((row) => (
-                <div key={row.star} className="flex items-center gap-3 text-xs">
-                  <span className="w-3 font-semibold text-muted-foreground">{row.star}</span>
-                  <div className="flex gap-0.5 text-amber-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star 
-                        key={i} 
-                        className={`w-3.5 h-3.5 fill-current ${
-                          i < row.star ? "text-amber-400" : "text-slate-200 fill-none"
-                        }`} 
-                      />
-                    ))}
-                  </div>
-                  <div className="flex-1 bg-slate-50 h-2.5 rounded-full overflow-hidden border border-slate-100">
-                    <div className={`bg-[#007a87] h-full rounded-full transition-all duration-500 ${row.pct}`} />
-                  </div>
-                  <span className="w-8 text-right text-muted-foreground font-medium">{row.count}</span>
+        {/* 1. Review Breakdown Summary Card */}
+        <div className="max-w-3xl mx-auto bg-white p-6 md:p-8 border border-slate-200/60 shadow-xs rounded-[24px] mb-20">
+          <div className="space-y-4">
+            {[
+              { star: 5, count: 289, pct: "w-[94.7%]" },
+              { star: 4, count: 13, pct: "w-[4.2%]" },
+              { star: 3, count: 2, pct: "w-[0.7%]" },
+              { star: 2, count: 1, pct: "w-[0.3%]" },
+              { star: 1, count: 0, pct: "w-0" },
+            ].map((row) => (
+              <div key={row.star} className="flex items-center gap-4 text-xs md:text-sm font-sans">
+                <span className="w-3 font-semibold text-slate-700">{row.star}</span>
+                <div className="flex gap-0.5 text-amber-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star 
+                      key={i} 
+                      className={`w-3.5 h-3.5 fill-current ${
+                        i < row.star ? "text-amber-400" : "text-slate-200 fill-none"
+                      }`} 
+                    />
+                  ))}
                 </div>
-              ))}
-            </div>
-
-            {/* Praise Highlights (Col span 5, left-bordered on desktop) */}
-            <div className="md:col-span-5 md:pl-8 md:border-l border-border/40 space-y-4">
-              <div>
-                <h4 className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-3">Patients Frequently Praise</h4>
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="flex items-center gap-2 p-2 border border-teal-100 bg-teal-50/20 text-[#005f6a] rounded-lg text-[11px] font-medium">
-                    <Smile className="w-3.5 h-3.5 text-teal-600 flex-shrink-0" />
-                    <span>Painless Treatment</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2 border border-teal-100 bg-teal-50/20 text-[#005f6a] rounded-lg text-[11px] font-medium">
-                    <User className="w-3.5 h-3.5 text-teal-600 flex-shrink-0" />
-                    <span>Polite Doctor</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2 border border-teal-100 bg-[#e4f7fa]/30 text-[#005f6a] rounded-lg text-[11px] font-medium">
-                    <Users className="w-3.5 h-3.5 text-teal-600 flex-shrink-0" />
-                    <span>Polite Staff</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-2 border border-teal-100 bg-[#e4f7fa]/30 text-[#005f6a] rounded-lg text-[11px] font-medium">
-                    <Activity className="w-3.5 h-3.5 text-teal-600 flex-shrink-0" />
-                    <span>Implant Expertise</span>
-                  </div>
+                <div className="flex-1 bg-[#f0f9fa] h-3 rounded-full overflow-hidden border border-slate-100/50">
+                  <div className={`bg-[#007a87] h-full rounded-full transition-all duration-500 ${row.pct}`} />
                 </div>
+                <span className="w-10 text-right text-slate-700 font-semibold">{row.count}</span>
               </div>
-              <div className="flex items-center gap-2 text-muted-foreground text-xs pt-2 border-t border-border/20">
-                <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>Real patient feedback from Google</span>
-              </div>
-            </div>
+            ))}
+          </div>
 
+          <hr className="my-6 border-t border-slate-100" />
+
+          {/* Praise Highlights Pills */}
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-4">
+            <div className="flex items-center gap-2 px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white">
+              <ToothIcon />
+              <span>Painless Treatment</span>
+            </div>
+            <div className="flex items-center gap-2 px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white">
+              <UserIcon />
+              <span>Polite Doctor</span>
+            </div>
+            <div className="flex items-center gap-2 px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white">
+              <StaffIcon />
+              <span>Polite Staff</span>
+            </div>
+            <div className="flex items-center gap-2 px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white">
+              <ImplantIcon />
+              <span>Implant Expertise</span>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center gap-2 text-slate-500 text-xs mt-6">
+            <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+            <span>Real patient feedback from Google</span>
           </div>
         </div>
 
         {/* 2. Full Width Testimonials Infinite Marquee */}
         <div className="w-full">
           {/* Centered Section Header Text */}
-          <div className="text-center mb-12 max-w-3xl mx-auto border-b border-border/40 pb-6">
-            <div className="flex items-center justify-center gap-2 text-xs font-semibold tracking-wider text-[#007a87] uppercase mb-1">
-              <Globe className="w-3.5 h-3.5 text-teal-600" />
-              <span>International Patient Testimonials</span>
+          <div className="text-center mb-12 max-w-4xl mx-auto pb-6">
+            <div className="flex justify-center mb-4">
+              <Image 
+                src="/global_icon.png" 
+                alt="Global Testimonials Icon" 
+                width={72} 
+                height={72} 
+                className="w-18 h-18 object-contain" 
+              />
             </div>
-            <h3 className="text-3xl font-serif text-primary">Trusted Beyond Borders</h3>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
+            <span className="text-xs font-semibold tracking-[0.2em] text-[#007a87] uppercase block mb-3">
+              International Patient Testimonials
+            </span>
+            <h3 className="text-3xl md:text-4xl font-serif text-primary mt-2">
+              Trusted Beyond Borders
+            </h3>
+            <p className="text-muted-foreground text-sm mt-2 leading-relaxed max-w-2xl mx-auto">
               Patients from across India and overseas trust De Dental Square for thoughtful, precise, and comfortable dental care in Varanasi.
             </p>
           </div>
