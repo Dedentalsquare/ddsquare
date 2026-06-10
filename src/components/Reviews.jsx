@@ -304,7 +304,7 @@ export default function Reviews() {
         </div>
 
         {/* 1. Review Breakdown Summary Card */}
-        <div className="max-w-3xl mx-auto bg-white p-6 md:p-8 border border-slate-200/60 shadow-xs rounded-[24px] mb-20">
+        <div className="max-w-4xl mx-auto bg-white p-6 md:p-8 border border-slate-200/60 shadow-xs rounded-[24px] mb-20">
           <div className="space-y-4">
             {[
               { star: 5, count: 289, pct: "w-[94.7%]" },
@@ -335,7 +335,7 @@ export default function Reviews() {
           <hr className="my-6 border-t border-slate-100" />
 
           {/* Praise Highlights Pills */}
-          <div className="grid grid-cols-2  items-center justify-center gap-3 md:gap-3 mb-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 items-center justify-center gap-3 md:gap-4 mb-4">
             <div className="flex items-center justify-center gap-2 px-3 md:px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white whitespace-nowrap">
               <ToothIcon />
               <span>Painless Treatment</span>
