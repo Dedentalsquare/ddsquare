@@ -335,20 +335,20 @@ export default function Reviews() {
           <hr className="my-6 border-t border-slate-100" />
 
           {/* Praise Highlights Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-4">
-            <div className="flex items-center gap-2 px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white">
+          <div className="grid grid-cols-2 md:flex md:flex-wrap items-center justify-center gap-3 md:gap-4 mb-4">
+            <div className="flex items-center justify-center gap-2 px-3 md:px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white whitespace-nowrap">
               <ToothIcon />
               <span>Painless Treatment</span>
             </div>
-            <div className="flex items-center gap-2 px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white">
+            <div className="flex items-center justify-center gap-2 px-3 md:px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white whitespace-nowrap">
               <UserIcon />
               <span>Polite Doctor</span>
             </div>
-            <div className="flex items-center gap-2 px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white">
+            <div className="flex items-center justify-center gap-2 px-3 md:px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white whitespace-nowrap">
               <StaffIcon />
               <span>Polite Staff</span>
             </div>
-            <div className="flex items-center gap-2 px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white">
+            <div className="flex items-center justify-center gap-2 px-3 md:px-5 py-2.5 border border-slate-200 rounded-full hover:border-[#007a87]/30 transition-colors text-slate-700 text-xs md:text-sm font-semibold shadow-xs bg-white whitespace-nowrap">
               <ImplantIcon />
               <span>Implant Expertise</span>
             </div>
