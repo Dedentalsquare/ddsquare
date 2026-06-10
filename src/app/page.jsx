@@ -152,7 +152,7 @@ export default function Home() {
               BOOK ONLINE
             </Button>
             <Button variant="outline" className="bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-white/10 rounded-none uppercase tracking-wider text-xs font-semibold h-12 px-10">
-              CALL +91 98765 43210
+              CALL +91 89481 25950
             </Button>
           </div>
         </div>
