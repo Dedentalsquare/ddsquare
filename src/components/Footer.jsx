@@ -77,7 +77,7 @@ export function Footer() {
               <li className="flex items-start gap-3 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                 <span className="leading-snug">
-                  Lane No 14 (Main Road),opposite Bank Of India<br />
+                  Lane No 14 (Main Road),Opposite Bank Of India<br />
                   ATM,Ravindrapuri Colony,Varansi-221005
                 </span>
               </li>
